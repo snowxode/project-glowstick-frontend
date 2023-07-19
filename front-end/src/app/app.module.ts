@@ -11,6 +11,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AddIngredientsComponent } from './add-ingredients/add-ingredients.component';
 import { AddMethodComponent } from './add-method/add-method.component';
 import { MenuComponent } from './menu/menu.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
     SignInComponent,
     AddIngredientsComponent,
     AddMethodComponent,
-    MenuComponent
+    MenuComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
