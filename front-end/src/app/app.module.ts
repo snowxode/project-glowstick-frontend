@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     HomeComponent,
     ShoppingListComponent,
     RecipesComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
