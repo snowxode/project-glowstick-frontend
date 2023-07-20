@@ -12,6 +12,8 @@ import { AddIngredientsComponent } from './add-ingredients/add-ingredients.compo
 import { AddMethodComponent } from './add-method/add-method.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BodyContainerComponent } from './body-container/body-container.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     AddIngredientsComponent,
     AddMethodComponent,
     MenuComponent,
-    NavbarComponent
+    NavbarComponent,
+    BodyContainerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
