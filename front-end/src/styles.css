@@ -9,3 +9,21 @@
 body {
     background-color: #A1F0CA;
 }
+
+.button {
+    margin-top: 55%;
+    margin-left: 80%;
+    background-color: #FF9D7F;
+    padding: 1%;
+    border-radius: 52px;
+    color: #ffffff;
+    display: flex;
+}
+.button p {
+    margin-right: 4px;
+    float: left;
+}
+.button svg {
+    margin-top: 8%;
+    float: right;
+}
