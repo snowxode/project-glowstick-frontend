@@ -1,17 +1,17 @@
-
-<app-sign-in> </app-sign-in>
-
-
-<!--
 <div class="flex justify-center h-screen">
     <div class="flex-col mx-[230px] p-5 ">
         <app-navbar></app-navbar>
             <div class="bg-ui-white flex p-2 my-10 rounded-[52px] items-center h-3/5 justify-center top-[130px] max-w-[818px] min-w-[650px] min-h-[575px] shadow-xl">
-                <p>Text</p>
+                <ng-container *ngIf="recipes"><app-recipes ></app-recipes></ng-container>
+                <ng-container *ngIf="home"><app-home></app-home></ng-container>
+                <ng-container *ngIf="shopList"><app-shopping-list></app-shopping-list></ng-container>
+                <ng-container *ngIf="addIngre"><app-add-ingredients></app-add-ingredients></ng-container>
+                <ng-container *ngIf="addMeth"><app-add-method></app-add-method></ng-container>
+                <ng-container *ngIf="upload"><app-upload-image></app-upload-image></ng-container>
+                <ng-container *ngIf="menu"><app-menu></app-menu></ng-container>
+                
             </div>
         <app-footer></app-footer>
     </div>
 </div>
--->
-
 <router-outlet></router-outlet>

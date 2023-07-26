@@ -9,3 +9,20 @@
 body {
     background-color: #A1F0CA;
 }
+
+.button {
+    background-color: #FF9D7F;
+    padding: 1%;
+    padding-left: 8%;
+    border-radius: 52px;
+    color: #ffffff;
+    display: flex;
+}
+.button p {
+    margin-right: 12px;
+    float: left;
+}
+.button svg {
+    margin-top: -18%;
+    float: right;
+}
