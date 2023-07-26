@@ -9,16 +9,18 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AddIngredientsComponent } from './add-ingredients/add-ingredients.component';
 import { AddMethodComponent } from './add-method/add-method.component';
 import { MenuComponent } from './menu/menu.component';
+import { AppComponent } from './app.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'recipes', component: RecipesComponent },
-  { path: 'upload', component: UploadImageComponent },
+  { path: 'home', component: TestComponent },
+  { path: 'shopping-list', component: TestComponent },
+  { path: 'recipes', component: TestComponent },
+  { path: 'upload', component: TestComponent },
   { path: 'sign-in', component: SignInComponent },
-  { path: 'add-ingredients', component: AddIngredientsComponent },
-  { path: 'add-method', component: AddMethodComponent },
-  { path: 'menu', component: MenuComponent },
+  { path: 'add-ingredients', component: TestComponent },
+  { path: 'add-method', component: TestComponent },
+  { path: 'menu', component: TestComponent },
 ];
 
 @NgModule({
