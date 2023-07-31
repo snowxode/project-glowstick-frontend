@@ -10,7 +10,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
 // import { AddMethodComponent } from './add-method/add-method.component';
 // import { MenuComponent } from './menu/menu.component';
 // import { AppComponent } from './app.component';
-
 import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
