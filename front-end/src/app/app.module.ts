@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BodyContainerComponent } from './body-container/body-container.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,7 @@ import { TestComponent } from './test/test.component';
     MenuComponent,
     NavbarComponent,
     BodyContainerComponent,
-    FooterComponent,
-    TestComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
