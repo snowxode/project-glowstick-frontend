@@ -12,7 +12,8 @@ export class ShoppingListComponent {
   items:any = [
     { Name: 'Digestives', Amount: '400g', Category: 'Biscuits' },
     { Name: 'Cream cheese', Amount: '200g', Category: 'Dairy' },
-    { Name: 'Strawberries', Amount: '400g', Category: 'Fruit' }
+    { Name: 'Strawberries', Amount: '400g', Category: 'Fruit' },
+    { Name: 'Vanilla Extract', Amount: '10 cups', Category: 'Baking' },
   ];
   _object = Object;
 }
