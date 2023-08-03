@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import 'zone.js/dist/zone'; 
-import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { PipeTransform, Pipe } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list',
@@ -11,6 +8,7 @@ import { PipeTransform, Pipe } from '@angular/core';
 })
 
 export class ShoppingListComponent {
+  // Example JSON for testing purposes - just need to replace with JSON data from database
   items:any = [
     { Name: 'Digestives', Amount: '400g', Category: 'Biscuits' },
     { Name: 'Cream cheese', Amount: '200g', Category: 'Dairy' },
@@ -18,4 +16,5 @@ export class ShoppingListComponent {
   ];
   _object = Object;
 }
-bootstrapApplication(ShoppingListComponent)
+// I don't know if this is needed or what it does just yet - will test
+bootstrapApplication(ShoppingListComponent); 

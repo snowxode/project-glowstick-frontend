@@ -18,12 +18,12 @@ const routes: Routes = [
   { path: 'shopping-list', component: TestComponent },
   { path: 'recipes', component: TestComponent },
   { path: 'upload', component: TestComponent },
-  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-in', component: TestComponent },
   { path: 'add-ingredients', component: TestComponent },
   { path: 'add-method', component: TestComponent },
   { path: 'menu', component: TestComponent },
   { path: '', component: TestComponent },
-  { path: 'sign-up', component: SignUpComponent},
+  { path: 'sign-up', component: TestComponent},
 ];
 
 @NgModule({
