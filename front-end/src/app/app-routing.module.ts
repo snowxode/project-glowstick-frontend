@@ -11,6 +11,7 @@ import { AddMethodComponent } from './add-method/add-method.component';
 import { MenuComponent } from './menu/menu.component';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: 'home', component: TestComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'add-ingredients', component: TestComponent },
   { path: 'add-method', component: TestComponent },
   { path: 'menu', component: TestComponent },
+  { path: '', component: TestComponent },
+  { path: 'sign-up', component: SignUpComponent},
 ];
 
 @NgModule({
