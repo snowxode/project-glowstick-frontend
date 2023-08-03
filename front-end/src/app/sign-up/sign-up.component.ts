@@ -30,7 +30,7 @@ export class SignUpComponent {
   
     // Hash password for encryption
     const hashedPassword = SHA256(signUpForm.password).toString(enc.Base64);
-    console.log(SHA256("password").toString(enc.Base64) == hashedPassword);
+
     // Set userCreationData fields
     this.userCreationData.name = name;
     this.userCreationData.username = signUpForm.username;
