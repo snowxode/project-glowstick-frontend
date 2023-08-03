@@ -1,1 +1,12 @@
-<p>shopping-list works!</p>
+<table class="shoppingList">
+    <thead>
+        <tr>
+            <th *ngFor="let header of _object.keys(items[0]); let i = index">{{header}}</th>
+          </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of items; let i = index">
+        <td *ngFor="let objKey of _object.keys(row); let j = index">{{ row[objKey] }} </td>
+      </tr>
+    </tbody>
+  </table>

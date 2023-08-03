@@ -37,7 +37,7 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   return this.recipes = true;
-                } else if (event.url == "/home") {
+                } else if (event.url == "/home" || event.url == "/") {
                   this.recipes = false;
                   this.shopList = false;
                   this.addIngre = false;
