@@ -1,23 +1,22 @@
 
 .button1 {
-    margin-top: 50%;
-    margin-right: -25%;
+    margin-top: 850%;
     background-color: #FF9D7F;
-    padding: 1%;
+    /* padding: 1%; */
     border-radius: 52px;
     color: #ffffff;
     display: flex;
 }
 .button1 p, .button2 p {
     margin-right: 4px;
+    padding-left: 4px;
     float: left;
 }
 
 .button2 {
     margin-top: 50%;
-    margin-left: 80%;
     background-color: #FF9D7F;
-    padding: 1%;
+    /* padding: 1%; */
     border-radius: 52px;
     color: #ffffff;
     display: flex;
