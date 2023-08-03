@@ -16,6 +16,8 @@ import { BodyContainerComponent } from './body-container/body-container.componen
 import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

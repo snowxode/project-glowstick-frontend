@@ -1,10 +1,10 @@
-<form action="">
-    <input type="" name="firstName" placeholder="First Name">
-    <input type="" name="lastName" placeholder="Last Name">
-    <input type="" name="username" placeholder="Username">
-    <input type="" name="email" placeholder="Email">
-    <input type="" name="phoneNumber" placeholder="Phone Number">
-    <input type="" name="password" placeholder="Password">
+<form #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm.value)">
+    <input type="text" name="fName" placeholder="First Name" required ngModel>
+    <input type="text" name="lName" placeholder="Last Name" required ngModel>
+    <input type="text" name="username" placeholder="Username" required ngModel>
+    <input type="email" name="email" placeholder="Email" required ngModel>
+    <input type="text" name="phoneNumber" placeholder="Phone Number" required ngModel>
+    <input type="password" name="password" placeholder="Password" required ngModel>
     <!-- TODO: Confirm password and its validation
     <input type="" name="confirmPassword" placeholder="Confirm Password">
     -->
