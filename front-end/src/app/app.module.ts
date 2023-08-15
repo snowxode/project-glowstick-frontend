@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     FooterComponent,
     TestComponent,
     SignUpComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    TsAndCsComponent
   ],
   imports: [
     BrowserModule,
