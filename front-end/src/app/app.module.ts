@@ -18,6 +18,7 @@ import { TestComponent } from './test/test.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     BodyContainerComponent,
     FooterComponent,
     TestComponent,
-    SignUpComponent
+    SignUpComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
