@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,7 +8,8 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  constructor(private _auth: AuthService) { }
+  constructor(private _auth: AuthService,
+              private _router: Router) { }
 
   loginUserData = {
     username: '',
@@ -21,7 +23,13 @@ export class SignInComponent {
   loginUser() {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
-      res => console.log(res),
+      res => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
+        
+        // Navigate to home page
+        this._router.navigate(['/home'])
+      },
       err => console.log(err)
     )
   }
