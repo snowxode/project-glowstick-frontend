@@ -19,6 +19,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { AuthService } from './auth.service';
     BodyContainerComponent,
     FooterComponent,
     TestComponent,
-    SignUpComponent
+    SignUpComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
