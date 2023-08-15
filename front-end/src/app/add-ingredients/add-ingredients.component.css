@@ -1,3 +1,54 @@
 .button {
-    margin-top: 800%;
+    margin-top: 30%;
+    width:fit-content;
 }
+
+#drop {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    overflow-y:auto;
+    max-height:550px;
+}
+
+#drop thead th {
+    background-color: #82ADFF;
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top:0;
+    z-index:100;
+}
+
+#drop th {
+    position: sticky;
+    top:0;
+}
+
+#drop th, #drop td {
+    padding: 12px 15px;
+}
+
+
+#drop tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+#drop tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#drop tbody tr:last-of-type {
+    border-bottom: 2px solid #82ADFF;
+}
+
+table {
+    overflow-y:scroll;
+    max-height:550px;
+    /* float:left; */
+    /* display:block; */
+}
+
