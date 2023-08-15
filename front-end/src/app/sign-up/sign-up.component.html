@@ -1,12 +1,11 @@
-<form #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm.value)">
-    <input type="text" name="fName" placeholder="First Name" required ngModel>
-    <input type="text" name="lName" placeholder="Last Name" required ngModel>
-    <input type="text" name="username" placeholder="Username" required ngModel>
-    <input type="email" name="email" placeholder="Email" required ngModel>
-    <input type="text" name="phoneNumber" placeholder="Phone Number" required ngModel>
-    <input type="password" name="password" placeholder="Password" required ngModel>
+<form>
+    <input type="text" name="name" placeholder="Name" required [(ngModel)]="registerUserData.name">
+    <input type="text" name="username" placeholder="Username" required [(ngModel)]="registerUserData.username">
+    <input type="email" name="email" placeholder="Email" required [(ngModel)]="registerUserData.email">
+    <input type="text" name="phoneNumber" placeholder="Phone Number" required [(ngModel)]="registerUserData.phoneNumber">
+    <input type="password" name="password" placeholder="Password" required [(ngModel)]="registerUserData.password">
     <!-- TODO: Confirm password and its validation
     <input type="" name="confirmPassword" placeholder="Confirm Password">
     -->
-    <input type="submit" name="submitButton" value="Sign Up">
+    <button (click)="registerUser()" class="button">Sign Up</button>
 </form>

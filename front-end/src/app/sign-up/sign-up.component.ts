@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { SHA256, enc } from 'crypto-js';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,10 +10,28 @@ import { SHA256, enc } from 'crypto-js';
 
 export class SignUpComponent {
 
-  constructor(private http: HttpClient) { 
+  registerUserData = {
+    name: '',
+    username: '',
+    email: '',
+    phoneNumber: '',
+    password: ''
+  }
+  constructor(private _auth: AuthService ) { }
+
+  ngOnInit(){
 
   }
 
+  registerUser() {
+    this._auth.registerUser(this.registerUserData)
+    .subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
+  }
+
+  /*
   newUser: any;
     userCreationData: any = {
       name: '',
@@ -49,4 +67,5 @@ export class SignUpComponent {
       console.error('An error occurred while making the POST request:', err);
     }
   }
+  */
 }
