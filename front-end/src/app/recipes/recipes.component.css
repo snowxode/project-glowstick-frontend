@@ -1,3 +1,58 @@
 .button {
-    margin-top: 450%;
+    margin-top: 130%;
+    width:fit-content;
+    margin-left: 50%;
+}
+
+.shoppingList {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* position: relative; */
+    
+}
+
+.shoppingList thead tr {
+    background-color: #82ADFF;
+    color: #ffffff;
+    text-align: left;
+    position: sticky;
+    top:0;
+    z-index:100;
+    
+}
+
+.shoppingList th {
+    position: sticky;
+    top:0;
+    /* display:block; */
+    
+}
+
+.shoppingList th,
+.shoppingList td {
+    padding: 12px 15px;
+}
+
+.shoppingList tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+.shoppingList tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.shoppingList tbody tr:last-of-type {
+    border-bottom: 2px solid #82ADFF;
+}
+
+table {
+    overflow-y:scroll;
+    max-height:550px;
+    float:left;
+    display:block;
 }
