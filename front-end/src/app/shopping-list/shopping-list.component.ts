@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-shopping-list',
@@ -17,5 +16,3 @@ export class ShoppingListComponent {
   ];
   _object = Object;
 }
-// I don't know if this is needed or what it does just yet - will test
-bootstrapApplication(ShoppingListComponent); 
