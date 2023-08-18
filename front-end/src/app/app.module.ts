@@ -22,6 +22,8 @@ import { AuthService } from './auth.service';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     TestComponent,
     SignUpComponent,
     PrivacyPolicyComponent,
-    TsAndCsComponent
+    TsAndCsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
