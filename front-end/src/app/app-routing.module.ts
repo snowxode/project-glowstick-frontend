@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'sign-up', component: TestComponent },
   { path: 'privacy-policy', component: TestComponent },
   { path: 'terms-and-conditions', component: TestComponent },
+  { path: 'contact-us', component: TestComponent },
 ];
 
 @NgModule({
