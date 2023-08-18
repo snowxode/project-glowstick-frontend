@@ -16,12 +16,12 @@ import { BodyContainerComponent } from './body-container/body-container.componen
 import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
-
+import { TokenInterceptorService } from './token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,12 @@ import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, 
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
