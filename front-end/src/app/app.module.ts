@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
     TestComponent,
     SignUpComponent,
     PrivacyPolicyComponent,
-    TsAndCsComponent
+    TsAndCsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
