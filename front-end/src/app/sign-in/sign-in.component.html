@@ -11,11 +11,11 @@
 
             <!-- Username and Password text boxes + login button -->
             <div class="items justify-center items-center flex">
-                <form action="">
-                    <input type="" name="username" placeholder="Username" class="text-input focus:outline-none focus:shadow-outline my-1">
-                    <input type="" name="password" placeholder="Password" class="text-input focus:outline-none focus:shadow-outline my-1">
+                <form >
+                    <input type="" name="username" placeholder="Username" class="text-input focus:outline-none focus:shadow-outline my-1" [(ngModel)]="loginUserData.username">
+                    <input type="" name="password" placeholder="Password" class="text-input focus:outline-none focus:shadow-outline my-1" [(ngModel)]="loginUserData.password">
                     <div class="flex justify-end">
-                        <input type="submit" value="Log in" class="button">
+                        <button type="submit" name="submitButton" class="button" (click)="loginUser()">Log in</button>
                     </div>
                 </form>
             </div>

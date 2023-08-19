@@ -19,6 +19,9 @@ export class AppComponent implements OnDestroy{
   signIn: boolean = false;
   menu: boolean = false;
   signUp: boolean = false;
+  privacy: boolean = false;
+  tsandcs: boolean = false;
+  contact: boolean = false;
 
  
   constructor(private router: Router) {
@@ -38,6 +41,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.recipes = true;
                 } else if (event.url == "/home" || event.url == "/") {
                   this.recipes = false;
@@ -48,6 +54,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.home = true;
                 } else if (event.url == '/shopping-list') {
                   this.home = false;
@@ -58,6 +67,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.shopList = true;
                 } else if (event.url == '/add-ingredients') {
                   this.home = false;
@@ -68,6 +80,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.addIngre = true;
                 } else if (event.url == '/add-method') {
                   this.home = false;
@@ -78,6 +93,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.addMeth = true;
                 } else if (event.url == '/upload') {
                   this.home = false;
@@ -88,6 +106,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.upload = true;
                 } else if (event.url == '/sign-in') {
                   this.home = false;
@@ -98,6 +119,9 @@ export class AppComponent implements OnDestroy{
                   this.upload = false;
                   this.menu = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.signIn = true;
                 } else if (event.url == '/menu') {
                   this.home = false;
@@ -108,6 +132,9 @@ export class AppComponent implements OnDestroy{
                   this.signIn = false;
                   this.upload = false;
                   this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.menu = true;
                 } else if (event.url == '/sign-up') {
                   this.home = false;
@@ -118,7 +145,49 @@ export class AppComponent implements OnDestroy{
                   this.upload = false;
                   this.menu = false;
                   this.signIn = false
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  this.contact = false;
                   return this.signUp = true;
+                } else if (event.url == '/privacy-policy') {
+                  this.home = false;
+                  this.recipes = false;
+                  this.shopList = false;
+                  this.addIngre = false;
+                  this.addMeth = false;
+                  this.upload = false;
+                  this.menu = false;
+                  this.signIn = false
+                  this.signUp = false;
+                  this.tsandcs = false;
+                  this.contact = false;
+                  return this.privacy = true;
+                } else if (event.url == '/terms-and-conditions') {
+                  this.home = false;
+                  this.recipes = false;
+                  this.shopList = false;
+                  this.addIngre = false;
+                  this.addMeth = false;
+                  this.upload = false;
+                  this.menu = false;
+                  this.signIn = false
+                  this.signUp = false;
+                  this.privacy = false;
+                  this.contact = false;
+                  return this.tsandcs = true;
+                } else if (event.url == '/contact-us') {
+                  this.home = false;
+                  this.recipes = false;
+                  this.shopList = false;
+                  this.addIngre = false;
+                  this.addMeth = false;
+                  this.upload = false;
+                  this.menu = false;
+                  this.signIn = false
+                  this.signUp = false;
+                  this.privacy = false;
+                  this.tsandcs = false;
+                  return this.contact = true;
                 }
               }
               return

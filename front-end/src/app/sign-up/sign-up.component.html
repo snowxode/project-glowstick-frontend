@@ -10,31 +10,28 @@
             </div>
 
             <div class="h-fit">
-                <form #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm.value)">
+                <form>
                     <div class="justify-center items-center flex my-6 h-fit">
-                        <input type="text" name="fName" placeholder="First Name" required ngModel>
-                    </div>
-                    <div class="justify-center items-center flex my-6 h-fit">
-                        <input type="text" name="lName" placeholder="Last Name" required ngModel>
+                        <input type="text" name="name" placeholder="Full Name" required [(ngModel)]="registerUserData.name">
                     </div>
                     <div class="items justify-center items-center flex my-6 h-fit">
-                        <input type="text" name="username" placeholder="Username" required ngModel>
+                        <input type="text" name="username" placeholder="Username" required [(ngModel)]="registerUserData.username">
                     </div>
                     <div class="items justify-center items-center flex my-6 h-fit">
-                        <input type="email" name="email" placeholder="Email" required ngModel>
+                        <input type="email" name="email" placeholder="Email" required [(ngModel)]="registerUserData.email">
                     </div>
                     <div class="items justify-center items-center flex my-6 h-fit">
-                        <input type="text" name="phoneNumber" placeholder="Phone Number" required ngModel>
+                        <input type="text" name="phoneNumber" placeholder="Phone Number" required [(ngModel)]="registerUserData.phoneNumber">
                     </div>
                     <div class="items justify-center items-center flex my-6 h-fit">
-                        <input type="password" name="password" placeholder="Password" required ngModel>
+                        <input type="password" name="password" placeholder="Password" required [(ngModel)]="registerUserData.password">
                     </div>
                     
                     <!-- TODO: Confirm password and its validation
                     <input type="" name="confirmPassword" placeholder="Confirm Password">
                     -->
                     <div class="items justify-end items-end flex my-6 mx-5 h-fit">
-                        <input type="submit" name="submitButton" value="Sign Up" class="button px-5 py-2">
+                        <button (click)="registerUser()" class="button px-5 py-2">Sign Up</button>
                     </div>
                     
                 </form>
