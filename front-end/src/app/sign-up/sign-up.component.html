@@ -1,12 +1,45 @@
-<form #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm.value)">
-    <input type="text" name="fName" placeholder="First Name" required ngModel>
-    <input type="text" name="lName" placeholder="Last Name" required ngModel>
-    <input type="text" name="username" placeholder="Username" required ngModel>
-    <input type="email" name="email" placeholder="Email" required ngModel>
-    <input type="text" name="phoneNumber" placeholder="Phone Number" required ngModel>
-    <input type="password" name="password" placeholder="Password" required ngModel>
-    <!-- TODO: Confirm password and its validation
-    <input type="" name="confirmPassword" placeholder="Confirm Password">
-    -->
-    <input type="submit" name="submitButton" value="Sign Up">
-</form>
+<div class="flex justify-center h-screen">
+    <div class="flex-col mx-[230px] p-5 ">
+        <div class="bg-ui-white p-2 my-10 rounded-[52px] h-3/5 top-[130px] max-w-[818px] min-w-[650px] min-h-[700px] shadow-xl">
+            
+            <!-- Sign Up title -->
+            <div class="items justify-center items-center flex">
+                <div class="bg-ui-blue text-ui-white h-[84px] w-[300px] flex justify-center items-center rounded-full m-10 shadow-xl">
+                    <h1 class=" font-semibold text-xl">Sign Up</h1>
+                </div>
+            </div>
+
+            <div class="h-fit">
+                <form #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm.value)">
+                    <div class="justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="fName" placeholder="First Name" required ngModel>
+                    </div>
+                    <div class="justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="lName" placeholder="Last Name" required ngModel>
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="username" placeholder="Username" required ngModel>
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="email" name="email" placeholder="Email" required ngModel>
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="phoneNumber" placeholder="Phone Number" required ngModel>
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="password" name="password" placeholder="Password" required ngModel>
+                    </div>
+                    
+                    <!-- TODO: Confirm password and its validation
+                    <input type="" name="confirmPassword" placeholder="Confirm Password">
+                    -->
+                    <div class="items justify-end items-end flex my-6 mx-5 h-fit">
+                        <input type="submit" name="submitButton" value="Sign Up" class="button px-5 py-2">
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
