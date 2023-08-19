@@ -1,11 +1,42 @@
-<form>
-    <input type="text" name="name" placeholder="Name" required [(ngModel)]="registerUserData.name">
-    <input type="text" name="username" placeholder="Username" required [(ngModel)]="registerUserData.username">
-    <input type="email" name="email" placeholder="Email" required [(ngModel)]="registerUserData.email">
-    <input type="text" name="phoneNumber" placeholder="Phone Number" required [(ngModel)]="registerUserData.phoneNumber">
-    <input type="password" name="password" placeholder="Password" required [(ngModel)]="registerUserData.password">
-    <!-- TODO: Confirm password and its validation
-    <input type="" name="confirmPassword" placeholder="Confirm Password">
-    -->
-    <button (click)="registerUser()" class="button">Sign Up</button>
-</form>
+<div class="flex justify-center h-screen">
+    <div class="flex-col mx-[230px] p-5 ">
+        <div class="bg-ui-white p-2 my-10 rounded-[52px] h-3/5 top-[130px] max-w-[818px] min-w-[650px] min-h-[700px] shadow-xl">
+            
+            <!-- Sign Up title -->
+            <div class="items justify-center items-center flex">
+                <div class="bg-ui-blue text-ui-white h-[84px] w-[300px] flex justify-center items-center rounded-full m-10 shadow-xl">
+                    <h1 class=" font-semibold text-xl">Sign Up</h1>
+                </div>
+            </div>
+
+            <div class="h-fit">
+                <form>
+                    <div class="justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="name" placeholder="Full Name" required [(ngModel)]="registerUserData.name">
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="username" placeholder="Username" required [(ngModel)]="registerUserData.username">
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="email" name="email" placeholder="Email" required [(ngModel)]="registerUserData.email">
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="text" name="phoneNumber" placeholder="Phone Number" required [(ngModel)]="registerUserData.phoneNumber">
+                    </div>
+                    <div class="items justify-center items-center flex my-6 h-fit">
+                        <input type="password" name="password" placeholder="Password" required [(ngModel)]="registerUserData.password">
+                    </div>
+                    
+                    <!-- TODO: Confirm password and its validation
+                    <input type="" name="confirmPassword" placeholder="Confirm Password">
+                    -->
+                    <div class="items justify-end items-end flex my-6 mx-5 h-fit">
+                        <button (click)="registerUser()" class="button px-5 py-2">Sign Up</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
