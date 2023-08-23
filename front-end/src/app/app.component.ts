@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Router,NavigationStart, Event as NavigationEvent } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
