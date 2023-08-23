@@ -1,4 +1,31 @@
 .button {
-    margin-top: 50%;
+    margin-top: 20%;
     width:fit-content;
+}
+#method {
+display: block; 
+padding: 0.625rem; 
+border-radius: 0.5rem; 
+border-width: 1px; 
+border-color: #D1D5DB; 
+width: 100%; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+color: #444; 
+background-color: #F9FAFB; 
+overflow-y: auto;
+}
+#method:focus {
+  border-color: #82ADFF;
+  outline: none;
+}
+
+#methodLabel {
+display: block; 
+margin-bottom: 0.5rem; 
+font-size: 0.875rem;
+line-height: 1.25rem; 
+font-weight: 500; 
+color: #444; 
+
 }
