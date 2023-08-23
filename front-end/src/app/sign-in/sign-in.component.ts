@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent {
+export class SignInComponent{
+
   constructor(private _auth: AuthService,
               private _router: Router) { }
 
@@ -16,21 +17,18 @@ export class SignInComponent {
     password: ''
   }
 
-  ngOnInit(){
-
-  }
 
   loginUser() {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
-      res => {
+      (      res: { token: string; }) => {
         console.log(res)
         localStorage.setItem('token', res.token)
         
         // Navigate to home page
         this._router.navigate(['/home'])
       },
-      err => console.log(err)
+      (      err: any) => console.log(err)
     )
   }
 
