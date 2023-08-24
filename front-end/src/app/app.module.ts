@@ -23,6 +23,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FlashMessageModule } from 'jjwins-angular-12-flash-message';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FlashMessageModule
   ],
   providers: [AuthService, 
     {

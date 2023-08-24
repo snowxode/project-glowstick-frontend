@@ -9,6 +9,8 @@
                 </div>
             </div>
 
+            <jjwins-flash-message *ngIf="show_flash" [timeOut]="5000" [message]="flashMessage" [alertWarning]="true"></jjwins-flash-message>
+
             <!-- Username and Password text boxes + login button -->
             <div class="items justify-center items-center flex">
                 <form >

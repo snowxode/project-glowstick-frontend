@@ -22,6 +22,4 @@ class PermissionsService {
 export const AuthGuard: CanActivateFn = (next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean => {
   return inject(PermissionsService).canActivate(next, state);
 }
-export const authGuard: CanActivateFn = (route, state) => {
-  return true;
-};
+

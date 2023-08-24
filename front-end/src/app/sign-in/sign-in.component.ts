@@ -17,18 +17,22 @@ export class SignInComponent{
     password: ''
   }
 
+  show_flash = false;
+  flashMessage = "testing";
+
 
   loginUser() {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
-      (      res: { token: string; }) => {
-        console.log(res)
+      ( res: { token: string;}) => {
         localStorage.setItem('token', res.token)
-        
-        // Navigate to home page
         this._router.navigate(['/home'])
+
       },
-      (      err: any) => console.log(err)
+      ( err: any) => {
+        this.flashMessage = ("Unauthorized: " + err.error) 
+        this.show_flash = true
+      }
     )
   }
 
