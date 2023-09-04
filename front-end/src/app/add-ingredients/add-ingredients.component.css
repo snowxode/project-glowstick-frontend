@@ -1,31 +1,38 @@
 .button {
-    margin-top: 30%;
     width:fit-content;
+    margin-left:1%;
+    padding-left: 4px;
+    padding-right: 4px;
+    
 }
+
+#next {
+    position:fixed;
+    bottom:33%;
+    right:35%;
+}   
 
 #drop {
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 0.9em;
     min-width: 100px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    overflow-y:auto;
-    max-height:550px;
 }
 
 #drop thead th {
     background-color: #82ADFF;
     color: #ffffff;
     text-align: left;
-    position: sticky;
+    /* position: sticky;
     top:0;
-    z-index:100;
+    z-index:100; */
+    margin-top:50%;
 }
 
-#drop th {
+/* #drop th {
     position: sticky;
     top:0;
-}
+} */
 
 #drop th, #drop td {
     padding: 12px 15px;
@@ -46,7 +53,46 @@
 }
 
 table {
-    overflow-y:scroll;
-    max-height:550px;
+    overflow-y:auto;
+    max-height:300px;
+    width:200px;
+    margin-top: 11%;
 }
 
+.tabletime {
+    overflow-y: auto;
+    max-height:300px;
+    /* width: 550px; */
+    max-width:300px;
+    width:fit-content;
+    margin-bottom: 10%;
+    /* margin-left:27%; */
+}
+
+.title {
+    display: flex; 
+    margin: 2.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 9999px; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    height: 84px;
+    width: 300px;
+    background-color: #82ADFF;
+    color:#fff;
+    position: fixed;
+    top: 17%;
+}
+
+.buttons, .addClear {
+    display: flex;
+    flex-direction: row;
+    margin-left: 36%;
+    
+}
+
+.addClear {
+    position:fixed;
+    right:48%;
+    bottom: 33%;
+}

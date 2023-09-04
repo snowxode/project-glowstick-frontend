@@ -23,6 +23,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     SignUpComponent,
     PrivacyPolicyComponent,
     TsAndCsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

@@ -72,7 +72,7 @@ export class AppComponent implements OnDestroy{
                   this.tsandcs = false;
                   this.contact = false;
                   return this.shopList = true;
-                } else if (event.url == '/add-ingredients') {
+                } else if (event.url == '/recipes/new-recipe/add-ingredients') {
                   this.home = false;
                   this.recipes = false;
                   this.shopList = false;
@@ -85,7 +85,7 @@ export class AppComponent implements OnDestroy{
                   this.tsandcs = false;
                   this.contact = false;
                   return this.addIngre = true;
-                } else if (event.url == '/add-method') {
+                } else if (event.url == '/recipes/new-recipe//add-method') {
                   this.home = false;
                   this.recipes = false;
                   this.shopList = false;
@@ -98,7 +98,7 @@ export class AppComponent implements OnDestroy{
                   this.tsandcs = false;
                   this.contact = false;
                   return this.addMeth = true;
-                } else if (event.url == '/upload') {
+                } else if (event.url == '/recipes/new-recipe/upload') {
                   this.home = false;
                   this.recipes = false;
                   this.shopList = false;
