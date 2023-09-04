@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit{
-  // Hardcoded data for testing
+  // Temporary hardcoded data for testing
   items:any = [
     { Name: 'Digestives', },
     { Name: 'Cream cheese'},
@@ -21,17 +21,16 @@ export class RecipesComponent implements OnInit{
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  // TODO: make a service for this to get all of the back-end routes needed for the recipes page
+  // TODO: make a service for this to get all of the back-end routes needed for the recipes page - Use env variable in the service
   ngOnInit() {
     this.http.get<any>('http://localhost:3000/recipes').subscribe(
       res => {
         console.log(res.message);
       },
+      // If their sign in token is invalid, redirect to the sign in page
       err => {
-        if (err instanceof HttpErrorResponse) {
-          if (err.status === 401) {
-            this.router.navigate(['/sign-in']);
-          }
+        if (err instanceof HttpErrorResponse && err.status === 401) {
+          this.router.navigate(['/sign-in']);
         }
       }
     );

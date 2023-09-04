@@ -10,31 +10,35 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class SignInComponent {
   
-  constructor(private _auth: AuthService,
-              private _router: Router) { }
+  constructor(private _auth: AuthService, private _router: Router) { }
 
-
+  // Create a form group for the sign in form
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]) 
   });
 
-
+  
   loginUser() {
+    // If the form is valid, login the user with the backend
     if (this.loginForm.valid) {
       this._auth.loginUser(this.loginForm.value)
       .subscribe(
         ( res: { token: string; }) => {
+          // Store the login token in local storage
           localStorage.setItem('token', res.token)
+
           // Navigate to home page
           this._router.navigate(['/home'])
         },
         ( err: any) => {
+          // If there is an error on the backend, show an error message
           this.errorMsg = err.statusText +' - '+ err.error;
           this.showAlert();
         }
       );
     }
+    // If the form is invalid, show an error message
     else {
       if (this.loginForm.controls.username.getError('required')){
         this.errorMsg = "Please enter a username";
@@ -45,6 +49,8 @@ export class SignInComponent {
       this.showAlert();
     }
   }
+
+  // Alert variables
   alertIsHidden: boolean = true;
   errorMsg: string = ""
 
@@ -57,5 +63,7 @@ export class SignInComponent {
     this.alertIsHidden = false;
     return
   }
+
+  // Hide the alert (when the x is clicked)
   closeAlert(){this.alertIsHidden = true;}
 }
