@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+
+import { ModalService } from '../_services/modal.service';
 @Component({
   selector: 'app-add-ingredients',
   templateUrl: './add-ingredients.component.html',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AddIngredientsComponent {
   allItems: any = [];
+
+  constructor(protected modalService: ModalService) { }
 
   get items() {
     return this.allItems;
