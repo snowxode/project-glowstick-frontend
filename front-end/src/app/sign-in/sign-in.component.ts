@@ -15,9 +15,9 @@ export class SignInComponent {
 
 
   loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required]), // Add Validators.required for username
-      password: new FormControl('', [Validators.required]) // Add Validators.required for password
-    });
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]) 
+  });
 
 
   loginUser() {
@@ -36,7 +36,12 @@ export class SignInComponent {
       );
     }
     else {
-      this.errorMsg = "Please enter a username / password";
+      if (this.loginForm.controls.username.getError('required')){
+        this.errorMsg = "Please enter a username";
+      }
+      else if (this.loginForm.controls.password.getError('required')){
+        this.errorMsg = "Please enter a password";
+      }
       this.showAlert();
     }
   }

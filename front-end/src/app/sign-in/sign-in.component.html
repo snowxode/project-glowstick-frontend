@@ -21,8 +21,8 @@
             <!-- Username and Password text boxes + login button -->
             <div class="items justify-center items-center flex">
                 <form [formGroup]="loginForm">
-                    <input type="" name="username" placeholder="Username" class="text-input focus:outline-none focus:shadow-outline my-1" formControlName="username">
-                    <input type="" name="password" placeholder="Password" class="text-input focus:outline-none focus:shadow-outline my-1" formControlName="password">
+                    <input type="text" name="username" placeholder="Username" class="text-input focus:outline-none focus:shadow-outline my-1" formControlName="username">
+                    <input type="password" name="password" placeholder="Password" class="text-input focus:outline-none focus:shadow-outline my-1" formControlName="password">
                     <div class="flex justify-end">
                         <button type="submit" name="submitButton" class="button" (click)="loginUser()">Log in</button>
                     </div>
