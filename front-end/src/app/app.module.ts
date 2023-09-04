@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
@@ -51,7 +51,8 @@ import { ModalComponent } from './modal/modal.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, 
     {
