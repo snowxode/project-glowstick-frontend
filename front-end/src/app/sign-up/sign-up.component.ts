@@ -64,7 +64,7 @@ export class SignUpComponent {
       else if (this.signUpForm.controls.password.getError('required')){
         this.errorMsg = "Please enter a password";
       }
-      if (this.signUpForm.controls.confirmPassword.value != this.signUpForm.controls.password.value){
+      else if (this.signUpForm.controls.confirmPassword.value != this.signUpForm.controls.password.value){
         this.errorMsg = "Passwords do not match";
       }
       this.showAlert();
