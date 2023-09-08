@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from './../environments/environment';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AuthService {
   private _loginUrl = `${environment.API_URL}auth/login`;
 
   constructor(private http: HttpClient,
-              private _router: Router) { }
+              private _router: Router, private _cookies: CookieService) { }
 
   registerUser(user: any) {
     return this.http.post<any>(this._registerUrl, user);
@@ -26,6 +27,7 @@ export class AuthService {
 
   logoutUser() {
     localStorage.removeItem('token');
+    this._cookies.delete('userID');
     this._router.navigate(['/home']);
   }
   
