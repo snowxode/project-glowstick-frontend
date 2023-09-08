@@ -85,7 +85,7 @@ export class AppComponent implements OnDestroy{
                   this.tsandcs = false;
                   this.contact = false;
                   return this.addIngre = true;
-                } else if (event.url == '/recipes/new-recipe//add-method') {
+                } else if (event.url == '/recipes/new-recipe/add-method') {
                   this.home = false;
                   this.recipes = false;
                   this.shopList = false;
