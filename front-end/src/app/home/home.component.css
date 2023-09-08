@@ -1,7 +1,29 @@
 .button {
-    margin-top: 5%;
+    margin-top: 2%;
     width: fit-content;
     justify-content: center;
     margin-left:auto;
     margin-right: auto;
+}
+
+.homePageContent {
+    overflow: auto;
+    max-height:500px;
+}
+
+img {
+    height:300px;
+}
+
+.header {
+    font-weight: 700;
+}
+
+.listHeader {
+    font-style: italic;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: disc;
 }
