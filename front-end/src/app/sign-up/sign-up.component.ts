@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -10,7 +11,7 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 export class SignUpComponent {
 
-  constructor(private _auth: AuthService, private _router: Router) { }
+  constructor(private _auth: AuthService, private _router: Router, private _cookies: CookieService) { }
   
   // Create a form group for the sign up form
   signUpForm = new FormGroup({
@@ -31,6 +32,9 @@ export class SignUpComponent {
           // Store the login token in local storage
           localStorage.setItem('token', res.token)
 
+          // Store the userID in cookies
+          this._cookies.set('userID', res.userID);
+          
           // Navigate to home page
           this._router.navigate(['/home'])
         },
