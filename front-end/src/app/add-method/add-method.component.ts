@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-method.component.css']
 })
 export class AddMethodComponent {
+instructionText: string | undefined;
 
+constructor() {
+
+}
+
+clear() {
+  this.instructionText = '';
+}
 }

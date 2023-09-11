@@ -8,6 +8,7 @@ import { ModalService } from '../_services/modal.service';
 })
 export class AddIngredientsComponent {
   allItems: any = [];
+  validationError: boolean = false;
 
   constructor(protected modalService: ModalService) { }
 
@@ -16,13 +17,27 @@ export class AddIngredientsComponent {
   }
 
   addItem(name: string, amount: string) {
-    this.allItems.unshift({
-      name,
-      amount
-    });
+    if (name == '' || amount == '') {
+      this.errorMessage();
+    } else {
+      this.resetMessage();
+        this.allItems.unshift({
+          name,
+          amount
+        });
+    }
+    
   }
 
   clearAll() {
     this.allItems = [];
+  }
+
+  errorMessage() {
+    return this.validationError = true;
+  }
+
+  resetMessage() {
+    return this.validationError = false;
   }
 }
