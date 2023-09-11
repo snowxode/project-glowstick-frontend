@@ -55,7 +55,11 @@
     onfocus="this.value=''"/>
   
     <div class="buttons" >
-      <button class="button" (click)="addItem(newName.value, newAmount.value); " (click) = "modalService.close();" (click)="newName.value = ''" (click)="newAmount.value = ''">Add</button>
+      <button class="button" (click)="addItem(newName.value, newAmount.value); " (click)="newName.value = ''" (click)="newAmount.value = ''">Add</button>
       <button class="button" (click)="modalService.close();" (click)="newName.value = ''" (click)="newAmount.value = ''">Close</button>
+    </div>
+    <div *ngIf="validationError" class="bg-[#fee2e2] border border-[#f87171] text-[#b91c1c] px-5 py-3 my-3 rounded relative" >
+      <strong class="font-bold">Oops! </strong><strong class="font-medium">something went wrong: </strong>
+      <span class="block sm:inline">Please make sure you've entered both the name and the amount!</span>
     </div>
 </jw-modal>

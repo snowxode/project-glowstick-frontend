@@ -29,3 +29,22 @@ font-weight: 500;
 color: #444; 
 
 }
+
+.text-error {
+  display: block; 
+  padding: 0.625rem; 
+  border-radius: 0.5rem; 
+  border-width: 1px; 
+  border-color: #82ADFF; 
+  width: 100%; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  color: #444; 
+  background-color: #F9FAFB; 
+  overflow-y: auto;
+}
+
+
+.text-error.ng-invalid.ng-touched {
+  border: 1px solid #f44336;
+}
