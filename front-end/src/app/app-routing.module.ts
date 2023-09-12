@@ -17,11 +17,15 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'shopping-list', component: ShoppingListComponent, canActivate: [AuthGuard] },
+
+  // TODO - Make the recipes routes children of the recipes route
   { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard] },
   { path: 'recipes/new-recipe/upload', component: UploadImageComponent, canActivate: [AuthGuard] },
   { path: 'recipes/new-recipe/add-ingredients', component: AddIngredientsComponent, canActivate: [AuthGuard] },
   { path: 'recipes/new-recipe/add-method', component: AddMethodComponent, canActivate: [AuthGuard] },
+
   { path: 'menu', component: MenuComponent },
+  
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
