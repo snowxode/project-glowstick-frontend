@@ -24,6 +24,7 @@ import { TsAndCsComponent } from './ts-and-cs/ts-and-cs.component';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ModalComponent } from './modal/modal.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ModalComponent } from './modal/modal.component';
     PrivacyPolicyComponent,
     TsAndCsComponent,
     ContactUsComponent,
-    ModalComponent
+    ModalComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
