@@ -14,26 +14,27 @@ import { AddMethodComponent } from './add-method/add-method.component';
 import { AddIngredientsComponent } from './add-ingredients/add-ingredients.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { recipeGuard } from './recipe.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'shopping-list', component: ShoppingListComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [recipeGuard]},
+  { path: 'shopping-list', component: ShoppingListComponent, canActivate: [AuthGuard, recipeGuard] },
 
   // TODO - Make the recipes routes children of the recipes route
-  { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard] },
-  { path: 'recipes/new-recipe/upload', component: UploadImageComponent, canActivate: [AuthGuard] },
-  { path: 'recipes/new-recipe/add-ingredients', component: AddIngredientsComponent, canActivate: [AuthGuard] },
-  { path: 'recipes/new-recipe/add-method', component: AddMethodComponent, canActivate: [AuthGuard] },
+  { path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard, recipeGuard] },
+  { path: 'recipes/new-recipe/upload', component: UploadImageComponent, canActivate: [AuthGuard, recipeGuard] },
+  { path: 'recipes/new-recipe/add-ingredients', component: AddIngredientsComponent, canActivate: [AuthGuard, recipeGuard] },
+  { path: 'recipes/new-recipe/add-method', component: AddMethodComponent, canActivate: [AuthGuard, recipeGuard]},
 
-  { path: 'menu', component: MenuComponent },
+  { path: 'menu', component: MenuComponent, canActivate: [recipeGuard] },
   
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'sign-in', component: SignInComponent },
-  { path: 'sign-up', component: SignUpComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'terms-and-conditions', component: TsAndCsComponent },
-  { path: 'contact-us', component: ContactUsComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'sign-in', component: SignInComponent, canActivate: [recipeGuard] },
+  { path: 'sign-up', component: SignUpComponent, canActivate: [recipeGuard] },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent, canActivate: [recipeGuard] },
+  { path: 'terms-and-conditions', component: TsAndCsComponent, canActivate: [recipeGuard] },
+  { path: 'contact-us', component: ContactUsComponent, canActivate: [recipeGuard] },
+  { path: '**', component: PageNotFoundComponent, canActivate: [recipeGuard] }
 ];
 
 @NgModule({
