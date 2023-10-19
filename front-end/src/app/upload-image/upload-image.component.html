@@ -12,10 +12,10 @@
 </label>
 
 <div class="button1">
-    <a routerLink="/recipes" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <a routerLink="/recipes" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="saveRecipe()">
       <p>Skip</p>
     </a>
-    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="saveRecipe()">
       <p>Save</p>
     </a>
 </div>

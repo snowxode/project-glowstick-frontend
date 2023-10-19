@@ -11,7 +11,6 @@ class recipeUrlChecker {
     const routeList: String[] = ['/recipes/new-recipe/add-ingredients', '/recipes/new-recipe/add-method', '/recipes/new-recipe/upload'];
     console.log(routeList.includes(this.router.url), route)
     if (routeList.includes(this.previousRoute.getPreviousUrl()) && !routeList.includes("/"+route)){
-      console.log('clearing session storage');
       sessionStorage.setItem('currentRecipe', '');
       return;
     }

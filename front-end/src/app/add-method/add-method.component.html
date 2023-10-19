@@ -8,12 +8,12 @@
   <div>
     <label id="methodLabel" for="method">Method:</label>
     <textarea rows="8" #txt="ngModel" class="text-error" name="questionText" cols="35" rows="8" placeholder="Add instructions here..."
-     [(ngModel)]="instructionText" required></textarea>
+     [(ngModel)]="instructionText" required #Instructions></textarea>
   </div>
 </form>
 
  <div>
-        <a routerLink="../upload" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit">
+        <a routerLink="../upload" routerLinkActive="active" ariaCurrentWhenActive="page" type="submit" (click)="updateRecipe(Instructions.value)">
           <button class="button" [disabled]="!options.valid" type="submit"> 
             <p>Next</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
