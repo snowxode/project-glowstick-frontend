@@ -25,6 +25,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ModalComponent } from './modal/modal.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PreviousRouteService } from './url.service';
 
 
 @NgModule({
@@ -61,7 +62,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
       multi: true
-    }],
+    }, PreviousRouteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
