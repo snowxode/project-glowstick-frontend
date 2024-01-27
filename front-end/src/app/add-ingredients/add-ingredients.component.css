@@ -7,9 +7,8 @@
 }
 
 #next {
-    position:fixed;
-    bottom:33%;
-    right:35%;
+    position:relative;
+    left:85%;
 }   
 
 #drop {
@@ -23,16 +22,9 @@
     background-color: #82ADFF;
     color: #F5F5F5;
     text-align: left;
-    /* position: sticky;
-    top:0;
-    z-index:100; */
     margin-top:50%;
 }
 
-/* #drop th {
-    position: sticky;
-    top:0;
-} */
 
 #drop th, #drop td {
     padding: 12px 15px;
@@ -57,32 +49,17 @@ table {
     max-height:300px;
     width:200px;
     margin-top: 11%;
+    height:250px;
 }
 
 .tabletime {
     overflow-y: auto;
     max-height:300px;
-    /* width: 550px; */
     max-width:300px;
     width:fit-content;
     margin-bottom: 10%;
-    /* margin-left:27%; */
 }
 
-.title {
-    display: flex; 
-    margin: 2.5rem; 
-    justify-content: center; 
-    align-items: center; 
-    border-radius: 9999px; 
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
-    height: 84px;
-    width: 300px;
-    background-color: #82ADFF;
-    color:#F5F5F5;
-    position: fixed;
-    top: 17%;
-}
 
 .buttons, .addClear {
     display: flex;
@@ -92,7 +69,6 @@ table {
 }
 
 .addClear {
-    position:fixed;
+    position: relative;
     right:48%;
-    bottom: 33%;
 }
