@@ -32,10 +32,18 @@ export class RecipesComponent implements OnInit{
         }
       }
     );
+    console.log(this.recipes.length);
   }
   selectRecipe(recipe: Recipe){
     this.currentActiveRecipe = recipe;
     return
+  }
+
+  noRecipes() {
+    if (this.recipes.length == 0) {
+      return true;
+    }
+    return false;
   }
 }
 

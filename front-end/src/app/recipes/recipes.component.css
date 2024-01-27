@@ -1,6 +1,9 @@
 .button {
     width:fit-content;
-    margin-left: 50%;
+    min-width: 100px;
+    position: relative;
+    /* margin-top: 30px; */
+    left: 35%;
 }
 
 hr {
@@ -11,13 +14,16 @@ hr {
     margin: 25px 0;
     font-size: 0.9em;
     min-width: 100px;
+    width:fit-content;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     float: left;
+    background-color: #82ADFF;
+    margin-left:-20%;
 }
 
 .shoppingList thead tr {
     background-color: #82ADFF;
-    color: #F5F5F5;
+    color: #ffffff;
     text-align: left;
     position: sticky;
     top:0;
@@ -37,7 +43,7 @@ hr {
 
 .shoppingList tbody tr {
     border-bottom: 1px solid #dddddd;
-    background-color: #F5F5F5;
+    background-color: #ffffff;
 }
 
 .shoppingList tbody tr:nth-of-type(even) {
@@ -52,6 +58,8 @@ table {
     overflow-y:auto;
     max-height:550px;
     display:block;
+    width:fit-content;
+    /* margin-left: -20%; */
 }
 
 .ingredients {
@@ -72,19 +80,25 @@ table {
     display: flex;
     flex-direction: column;
     float:right;
-    width:60%;
+    width:fit-content;
+    min-width:60%;
+    height:fit-content;
+    min-height:400px;
+    margin-right: -20%;
 }
 
-.pleaseForTheLoveOfGodWorkNormally {
-    padding: 0.5rem; 
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem; 
-    height: 60%; 
-    top: 110px;
-    max-width: 818px;
-    max-height: 60%;
-    min-width: 650px;
-    min-height: 575px;
-    position: fixed;
-    right: 700px;
+
+.noRecipeResponse {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    position: relative;
+    left: 25%;
+    flex-direction: column;
+}
+
+.noRecipeResponse p {
+    max-width: fit-content;
+    display: flex;
 }

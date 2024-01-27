@@ -1,5 +1,10 @@
-<div class="pleaseForTheLoveOfGodWorkNormally">
-  <table class="shoppingList">
+<div class="headerWrap">
+  <div class="blueHeader">
+    <h1 class=" font-semibold text-xl">Recipes</h1>
+  </div>
+</div>
+
+  <table class="shoppingList" [style.display]="noRecipes() ? 'none' : 'block' ">
 
     <!-- Recipe title list-->
     <thead>
@@ -16,7 +21,7 @@
   
   <div class="theRight">
       <!-- Recipe ingredients list-->
-  <div class="ingredients">
+  <div class="ingredients" [style.display]="noRecipes() ? 'none' : 'block' ">
     <h2>Ingredients:</h2>
     <br>
     <ul><ng-container *ngFor="let recipe of recipes">
@@ -24,12 +29,14 @@
         <li *ngFor="let ingredient of recipe.ingredients" class="ingredients">{{ingredient.name}} - {{ingredient.amount}} {{ingredient.measurement}}</li>
       </ng-container>
     </ng-container></ul>
-      
+    <br>
+    <hr>
   </div>
-  <br>
-  <hr>
+  
+
+ 
   <!-- Recipe method -->
-  <div class="method">
+  <div class="method" [style.display]="noRecipes() ? 'none' : 'block' ">
     <h2>Method:</h2>
     <br>
     <ng-container *ngFor="let recipe of recipes">
@@ -40,9 +47,12 @@
   </div>
   </div>
 
+  <div class="noRecipeResponse" [style.display]="noRecipes() ? 'flex' : 'none'">
+    <p >Uh oh! You don't have any recipes yet</p>
+    <p >Try adding one below</p>
+  </div>
   
-  
-  <div class="button">
+  <div class="button" [style.margin-top] = "noRecipes() ? '30px' : '350px'" >
     <a routerLink="./new-recipe/add-ingredients" routerLinkActive="active" ariaCurrentWhenActive="page">
       <p>New recipe</p>
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -50,5 +60,5 @@
       </svg>
     </a>
   </div>
-</div>
+
 
