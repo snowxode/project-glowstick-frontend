@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -14,4 +15,14 @@ export class NavbarComponent {
   
     authService = this._authService;
     router = this._router;
+    isOpen = false;
+
+    openNav() {
+      this.isOpen = true;
+      console.log("here");
+    }
+
+    closeNav() {
+      this.isOpen = false;
+    }
 }
