@@ -11,10 +11,10 @@ class PermissionsService {
   constructor(private router: Router, private auth : AuthService) {}
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    // if(!this.auth.isLoggedIn()){
-    //   this.router.navigate(['/sign-in']);
-    //   return false;
-    // }
+    if(!this.auth.isLoggedIn()){
+      this.router.navigate(['/sign-in']);
+      return false;
+    }
     return true;
   }
 }
