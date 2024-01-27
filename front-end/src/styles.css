@@ -27,3 +27,23 @@ body {
     float: right;
     margin-right: 2px;
 }
+
+.blueHeader {
+    display: flex; 
+    margin: 1.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 9999px; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    height: 84px;
+    min-width: 300px;
+    width: fit-content;
+    background-color: #82ADFF;
+    color:white;
+}
+
+.headerWrap {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
