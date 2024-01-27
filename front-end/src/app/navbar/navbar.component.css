@@ -1,0 +1,50 @@
+.sideNav {
+    height: 100%;
+    width:250px;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+}
+
+.sideNav a:hover {
+    color: #82adff;
+}
+
+.sideNav hr {
+    color: #82adff;
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+  }
