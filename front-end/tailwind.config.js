@@ -12,7 +12,7 @@ module.exports = {
       'ui-green': '#A1F0CA',
       'ui-blue': '#82ADFF',
       'ui-coral': '#FF9D7F',
-      'ui-white': '#FFFFF9',
+      'ui-white': '#F5F5F5',
     },
 
     extend: {},

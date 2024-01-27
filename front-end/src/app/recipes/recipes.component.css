@@ -17,7 +17,7 @@ hr {
 
 .shoppingList thead tr {
     background-color: #82ADFF;
-    color: #ffffff;
+    color: #F5F5F5;
     text-align: left;
     position: sticky;
     top:0;
@@ -37,7 +37,7 @@ hr {
 
 .shoppingList tbody tr {
     border-bottom: 1px solid #dddddd;
-    background-color: #ffffff;
+    background-color: #F5F5F5;
 }
 
 .shoppingList tbody tr:nth-of-type(even) {

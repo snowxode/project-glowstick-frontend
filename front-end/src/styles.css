@@ -13,7 +13,7 @@ body {
 .button {
     background-color: #FF9D7F;
     border-radius: 52px;
-    color: #ffffff;
+    color: #F5F5F5;
     display: flex;
 }
 .button p {

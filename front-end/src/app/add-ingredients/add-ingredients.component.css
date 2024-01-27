@@ -21,7 +21,7 @@
 
 #drop thead th {
     background-color: #82ADFF;
-    color: #ffffff;
+    color: #F5F5F5;
     text-align: left;
     /* position: sticky;
     top:0;
@@ -41,7 +41,7 @@
 
 #drop tbody tr {
     border-bottom: 1px solid #dddddd;
-    background-color: #ffffff;
+    background-color: #F5F5F5;
 }
 
 #drop tbody tr:nth-of-type(even) {
@@ -79,7 +79,7 @@ table {
     height: 84px;
     width: 300px;
     background-color: #82ADFF;
-    color:#fff;
+    color:#F5F5F5;
     position: fixed;
     top: 17%;
 }

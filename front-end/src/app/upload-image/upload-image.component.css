@@ -5,7 +5,7 @@
     background-color: #FF9D7F;
     padding: 1%;
     border-radius: 52px;
-    color: #ffffff;
+    color: #F5F5F5;
     width:fit-content;
     position:relative;
     margin-right:70%;
@@ -21,7 +21,7 @@ input[type=file]::file-selector-button {
     background: #82ADFF;
     padding: 10px 20px;
     border-radius: 10px;
-    color: #fff;
+    color: #F5F5F5;
     cursor: pointer;
     transition: background .2s ease-in-out;
   }
